@@ -1,0 +1,21 @@
+clear all, close all, clc
+
+A = randi(0:1,8)
+[r,k] = size(A);
+a = zeros(r+2,k+2);
+a(2:end-1,2:end-1) = A;
+
+b = A
+
+for iterationer = 1:100
+    for i = 1:r;
+        for j = 1:k;
+            [antal,punkt] = antalgrannar(a,i,j);
+            value = levnadsregler(antal,punkt);
+            b(i,j) = value;
+ spy(b,'s','b')
+        end
+    end
+    spy(b,'s','b')
+end
+

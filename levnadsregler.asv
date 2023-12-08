@@ -1,0 +1,15 @@
+function value = levnadsregler(antal,a)
+
+    if antal < 2
+        value = 0
+
+    elseif antal > 3
+        value = 0
+
+
+    elseif antal == 3
+        value = 1
+    else
+        value = a(r,k)
+    end
+end
